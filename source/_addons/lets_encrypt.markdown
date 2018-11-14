@@ -19,7 +19,9 @@ Setup and manage a [Let's Encrypt](https://letsencrypt.org/) certificate. This a
 ```json
 {
   "email": "example@example.com",
-  "domains": ["example.com", "mqtt.example.com", "hass.example.com"]
+  "domains": ["example.com", "mqtt.example.com", "hass.example.com"],
+  "certfile": "fullchain.pem",
+  "keyfile": "privkey.pem"
 }
 ```
 
@@ -32,6 +34,14 @@ domains:
   description: A list of domains to create/renew the certificate.
   required: true
   type: list
+certfile:
+  description: Name of the certfile that is created.  Leave as is.
+  required: true
+  type: string
+keyfile:
+  description: Name of the keyfile that is created.  Leave as is.
+  required: true
+  type: string
 {% endconfiguration %}
 
 ## {% linkable_title Home Assistant configuration %}
